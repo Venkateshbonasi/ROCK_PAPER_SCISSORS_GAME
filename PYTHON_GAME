@@ -1,0 +1,41 @@
+import random
+
+choices = ["rock", 'paper', 'scissors']
+computer = random.choice(choices)
+player = None
+while player not in choices:
+    player = input("rock,paper OR scissors?").lower()
+if player == computer:
+    print("COMPUTER:", computer)
+    print("PLAYER:", player)
+
+    print("tie!")
+elif player == "rock":
+    if computer == "paper":
+        print("COMPUTER:", computer)
+        print("PLAYER:", player)
+        print('computer wins')
+    if computer == "scissors":
+        print("COMPUTER:", computer)
+        print("PLAYER:", player)
+        print('player wins')
+elif player == "paper":
+    if computer == "rock":
+        print("COMPUTER:", computer)
+        print("PLAYER:", player)
+        print('player wins')
+    if computer == "scissors":
+        print("COMPUTER:", computer)
+        print("PLAYER:", player)
+        print('computer wins')
+elif player == "scissors":
+    if computer == "rock":
+        print("COMPUTER:", computer)
+        print("PLAYER:", player)
+        print('computer wins')
+    if computer == "paper":
+        print("COMPUTER:", computer)
+        print("PLAYER:", player)
+        print('player wins')
+
+print('GAME OVER!')
